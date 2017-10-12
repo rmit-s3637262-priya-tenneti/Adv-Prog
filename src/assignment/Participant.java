@@ -1,11 +1,15 @@
-package com.assignment;
+package assignment;
+
+import java.io.Serializable;
 
 /*created an abstract class to maintain encapsulation and hide the
- *  inner methods of athlete and official*/ 
-public abstract class Participant {
+ *  inner methods of athlete and official*/
+@SuppressWarnings("serial")
+public abstract class Participant implements Serializable {
 	private String id, name, state;
 	private int age;
-//constructor 
+
+	// constructor
 	public Participant(String id, String name, int age, String state) {
 		this.setId(id);
 		this.setName(name);
@@ -46,6 +50,6 @@ public abstract class Participant {
 	}
 
 	public void print() {
-		System.out.print("\tName:" + this.name +"\tAge:" + this.age + "\tState:" +this.state);
+		System.out.print("\tName:" + this.name + "\tAge:" + this.age + "\tState:" + this.state);
 	}
 }

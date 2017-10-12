@@ -1,4 +1,9 @@
-package com.assignment;
+package utilities;
+
+import assignment.Athlete;
+import assignment.Official;
+import assignment.Participant;
+
 //Class created to load the required hard coded values to the Participant type arrays(athletes and officials)
 public class Data {
 

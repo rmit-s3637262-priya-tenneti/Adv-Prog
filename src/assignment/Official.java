@@ -1,6 +1,9 @@
-package com.assignment;
+package assignment;
 
-public class Official extends Participant {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Official extends Participant implements Serializable{
 /*
  * created an official constructor and called super constructor of participant(super class)
  */

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane id="borderPaneStyle" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="controller.MainMenuController">
+	<top>
+		<HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308"
+			maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+			<children>
+				<Label id="headerLabel" alignment="CENTER" text="OZLYMPIC GAME"
+					HBox.hgrow="ALWAYS">
+					<graphic>
+						<ImageView fitHeight="88.0" fitWidth="130.0"
+							nodeOrientation="INHERIT" preserveRatio="true" smooth="true">
+							<image>
+								<Image url="@Ozlympic.jpg" />
+							</image>
+							<cursor>
+								<Cursor fx:constant="DISAPPEAR" />
+							</cursor>
+						</ImageView>
+					</graphic>
+				</Label>
+			</children>
+		</HBox>
+	</top>
+	<center>
+		<BorderPane prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<top>
+				<VBox BorderPane.alignment="CENTER">
+					<children>
+						<Label id="subLabel" alignment="CENTER" contentDisplay="CENTER"
+							maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+							text="Main Menu" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+						</Label>
+					</children>
+					<cursor>
+						<Cursor fx:constant="DISAPPEAR" />
+					</cursor>
+				</VBox>
+			</top>
+			<center>
+				<HBox alignment="CENTER" BorderPane.alignment="CENTER">
+					<children>
+						<GridPane alignment="CENTER" vgap="30.0" HBox.hgrow="ALWAYS">
+							<children>
+								<Button contentDisplay="CENTER" mnemonicParsing="false"
+									onAction="#createNewGame" prefHeight="61.0" prefWidth="380.0"
+									text="Create a New Game" GridPane.columnSpan="2" />
+								<Button mnemonicParsing="false" onAction="#viewGameResults"
+									prefHeight="61.0" prefWidth="380.0" text="View All Game Results"
+									GridPane.columnSpan="2" GridPane.rowIndex="1" />
+								<Button mnemonicParsing="false" onAction="#viewAthleteResults"
+									prefHeight="61.0" prefWidth="380.0" text="View All Participants Results"
+									GridPane.columnSpan="2" GridPane.rowIndex="2" />
+								<Button mnemonicParsing="false" onAction="#closeApplication"
+									prefHeight="61.0" prefWidth="380.0" text="Exit"
+									GridPane.columnSpan="2" GridPane.rowIndex="3" />
+							</children>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<columnConstraints>
+								<ColumnConstraints />
+								<ColumnConstraints />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+								<RowConstraints />
+							</rowConstraints>
+						</GridPane>
+					</children>
+				</HBox>
+			</center>
+			<bottom>
+				<HBox alignment="CENTER" BorderPane.alignment="CENTER">
+					<children>
+						<Label id="errorMessage" fx:id="lblErrorMessage" alignment="CENTER"
+							contentDisplay="CENTER" textAlignment="CENTER" textFill="RED"
+							VBox.vgrow="ALWAYS">
+						</Label>
+					</children>
+				</HBox>
+			</bottom>
+		</BorderPane>
+	</center>
+	<padding>
+		<Insets bottom="10.0" left="10.0" top="10.0" />
+	</padding>
+</BorderPane>

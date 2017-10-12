@@ -1,8 +1,10 @@
-package com.assignment;
+package assignment;
 
+import java.io.Serializable;
 import java.util.Random;
 
-public class Athlete extends Participant {
+@SuppressWarnings("serial")
+public class Athlete extends Participant implements Serializable {
 
 	private String type;
 	private int point;
